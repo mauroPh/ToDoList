@@ -16,7 +16,7 @@ import java.util.Scanner;
         
         switch (valorDecisao) {
         case"1":{
-        	System.out.println("Digite o nome da categoria sem espaços : ");
+        	System.out.println("Digite o nome da categoria sem espaÃ§os : ");
 			
 			Scanner scanNomeCategoria = new Scanner(System.in);
 			String nomeCategoria = scanNomeCategoria.next();
@@ -31,32 +31,32 @@ import java.util.Scanner;
    				}
         	   break ;
         }
-        //Tarefa:Implementar no codigo a remoção de uma categoria da lista.//
-      //Ex: opção 3 Lista as categorias(com indice) e quando o usuario digitar o indice deve remover a opção//
+        //Tarefa:Implementar no codigo a remoÃ§Ã£o de uma categoria da lista.//
+      //Ex: opÃ§Ã£o 3 Lista as categorias(com indice) e quando o usuario digitar o indice deve remover a opÃ§Ã£o//
         case "3":{
         	int i;
         	Scanner ler = new Scanner(System.in);
-        	//Lista os itens com seus indices respectivos e pede ao usuario para escolher a opção a ser removida
-        	System.out.printf("Os itens que você pode remover são:\n");
+        	//Lista os itens com seus indices respectivos e pede ao usuario para escolher a opÃ§Ã£o a ser removida
+        	System.out.println("Os itens que vocÃª pode remover sÃ£o:\n");
     	    int n = categorias.size();
     	    for (i=0; i<n; i++) {
-    	      System.out.printf("%d- %s\n", i, categorias.get(i));
+    	      System.out.println("%d- %s\n", i, categorias.get(i));
     	    }
-    	    System.out.printf("\nInforme o índice do item que será excluído:\n");
+    	    System.out.println("\nInforme o Ã­ndice do item que serÃ¡ excluÃ­do:\n");
     	    i = ler.nextInt();
  
     	    try {
     		      // remove o item
     		      categorias.remove(i);
     		    } catch (IndexOutOfBoundsException e) {
-    		        //indica que um indice escolhido não é válido.
-    		    	System.out.printf("\nErro: Posição inválida (%s).",
+    		        //indica que um indice escolhido nÃ£o Ã© vÃ¡lido.
+    		    	System.out.println("\nErro: PosiÃ§Ã£o invÃ¡lida (%s).",
     		          e.getMessage());
     		    }
-    	    System.out.printf("\nCategoria removida com sucesso! Lista Atualizada :\n");
+    	    System.out.println("\nCategoria removida com sucesso! Lista Atualizada :\n");
     		    i = 0;
     		    for (String categoria: categorias) {
-    		      System.out.printf("Posição %d- %s\n", i, categoria);
+    		      System.out.println("PosiÃ§Ã£o %d- %s\n", i, categoria);
     		      i++;
     		    }
     	    
@@ -66,7 +66,7 @@ import java.util.Scanner;
         		   System.exit(0);
         	   }
         	   default:{
-        		   System.out.println("Opção Inválida.");	
+        		   System.out.println("OpÃ§Ã£o InvÃ¡lida.");	
         		   break;        	   }
         	   
         	   }  	   
