@@ -37,12 +37,12 @@ import java.util.Scanner;
         	int i;
         	Scanner ler = new Scanner(System.in);
         	//Lista os itens com seus indices respectivos e pede ao usuario para escolher a opção a ser removida
-        	System.out.println("Os itens que você pode remover são:\n");
+        	System.out.printf("Os itens que você pode remover são:\n");
     	    int n = categorias.size();
     	    for (i=0; i<n; i++) {
-    	      System.out.println("%d- %s\n", i, categorias.get(i));
+    	      System.out.printf("%d- %s\n", i, categorias.get(i));
     	    }
-    	    System.out.println("\nInforme o índice do item que será excluído:\n");
+    	    System.out.printf("\nInforme o índice do item que será excluído:\n");
     	    i = ler.nextInt();
  
     	    try {
@@ -50,13 +50,13 @@ import java.util.Scanner;
     		      categorias.remove(i);
     		    } catch (IndexOutOfBoundsException e) {
     		        //indica que um indice escolhido não é válido.
-    		    	System.out.println("\nErro: Posição inválida (%s).",
+    		    	System.out.printf("\nErro: Posição inválida (%s).",
     		          e.getMessage());
     		    }
-    	    System.out.println("\nCategoria removida com sucesso! Lista Atualizada :\n");
+    	    System.out.printf("\nCategoria removida com sucesso! Lista Atualizada :\n");
     		    i = 0;
     		    for (String categoria: categorias) {
-    		      System.out.println("Posição %d- %s\n", i, categoria);
+    		      System.out.printf("Posição %d- %s\n", i, categoria);
     		      i++;
     		    }
     	    
